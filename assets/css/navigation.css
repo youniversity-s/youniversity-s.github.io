@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("http://fonts.cdnfonts.com/css/heavitas");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body h1{
+    color: #282f59;
+    font-family: "Heavitas", sans-serif;
+}
+
+body p{
+    color: #7C7C7C;
+    font-family: "Poppins", sans-serif;
+}
+
+body a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: "Heavitas", sans-serif; 
+}
+
+body h4{
+    font-family: "Poppins", sans-serif;
+}
+
+body h2{
+    font-family: "Heavitas", sans-serif; 
+}
+
+/* Header */
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 10px 50px;
+    align-items: center;
+}
+
+.navbar a:hover{
+    color: black;
+}
+
+.navbar ul{
+    flex: 1;
+    text-align: right;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.navbar ul li:hover{
+    background-color: white;
+}
+
+.logo{
+    width: 300px;
+}
+
+.content-nav{
+    text-align: right;
+    padding: 3rem;
+    padding-top: 15rem;
+}
+
+.content-nav h1{
+    margin-left: 5rem;
+    margin-right: 33px;
+    font-size: 60px;
+    color: whitesmoke;
+}
+
+.content-nav p{
+    margin-left: 20rem;
+    margin-right: 33px;
+    padding-left: 40rem;
+    padding-top: 1rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Picture */
+.schl-logo{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 5rem;
+    text-align: center;
+}
+
+
+.schl-logo h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.logos-row{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logos-col{
+    flex-basis: 28%;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    min-width: 230px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-prof{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: #1e2648;
+    padding: 12px;
+}
+
+.logo-prof img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+.logo-prof img:hover{
+    filter: grayscale(0);
+}
+
+.logo-prof h2{
+    margin: 5px 0 10px;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.logo-prof p{
+    margin-bottom: 10px;
+    color: #ff7878;
+}
+
+.logos-col::before, .logos-col::after{
+    content: '';
+    height: 0;
+    width: 0;
+    background: linear-gradient(135deg, #4642ff, #03008a, #fd7735, #ffa071);
+    position: absolute;
+    z-index: -1;
+    animation: none;
+}
+
+.logos-col::before{
+    left: 0;
+    top: -8px;
+}
+
+.logos-col::after{
+    right: 0;
+    bottom: -8px;
+}
+
+@keyframes stroke{
+    0%{
+        height: 8px;
+        width: 0px;
+    }
+    50%{
+        height: 8px;
+        width: calc(100% + 8px);
+    }
+    100%{
+        height: calc(100% + 16px);
+        width: calc(100% + 8px);
+    }
+}
+
+.logos-col:hover::before, .logos-col:hover::after{
+    animation: stroke 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+/* Footer */
+.footer{
+    margin-top: 80px;
+    background-image: url("../images/footer.png");
+    background-size: cover;
+}
+
+.col-4{
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.col-4 p{
+    color: #100C08;
+}
+
+.col-4 img{
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.footer2 h4, .footer3 h4, .footer4 h4{
+    color: #100C08;
+    font-weight: 400px;
+}
+
+.footer hr{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-around;
+    color: grey;
+    padding: 30px;
+    font-weight: 400;
+}
+
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 2em;
+    padding: 2rem;
+}

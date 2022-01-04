@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("http://fonts.cdnfonts.com/css/heavitas");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body h1{
+    color: #282f59;
+    font-family: "Heavitas", sans-serif;
+}
+
+body p{
+    color: #7C7C7C;
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+body a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: "Heavitas", sans-serif; 
+}
+
+body h4{
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --gradient-1 :linear-gradient(to bottom right, rgb(107, 107, 255), blue);
+    --gradient-2 : linear-gradient(to bottom right, rgb(80, 80, 255), rgb(253, 119, 119));
+    --gradient-3 :  linear-gradient(to bottom right, rgb(255, 207, 145),rgb(255, 111, 92));
+    --gradient-4 : linear-gradient(to bottom right, #2af598, #009efd);
+}
+
+/* header */
+header {
+    background-image: url("../images/header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 10px 50px;
+    align-items: center;
+}
+
+.navbar a:hover{
+    color: black;
+}
+
+.navbar ul{
+    flex: 1;
+    text-align: right;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.navbar ul li:hover{
+    background-color: white;
+}
+
+.logo{
+    width: 300px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.header-content ,.logo-img{
+    flex-basis: 50%;
+    padding: 5rem;
+}
+
+.header-content{
+    padding-top: 7rem;
+}
+
+.header-content h1{
+    font-size: 85px;
+    margin-bottom: 20px;
+    margin-top: 5rem;
+    color: #4642FF;
+}
+
+.header-content p{
+    margin-bottom: 30px;
+    padding-left: 10px;
+    color: black;
+}
+
+.logo-img img{
+    width: 400px;
+    margin-left: 50px;
+}
+
+/* Goal */
+.goal{
+    margin-top: 100px;
+}
+
+.container{
+    padding: 3rem;
+    display: flex;
+}
+
+.grid-wrapper, .goal-content{
+    flex-basis: 50%;
+}
+
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 2em;
+    padding: 2rem;
+}
+
+.grid-box {
+    height: 200px;
+    padding: 2.3rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.918);
+}
+
+.grid-box img{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    animation: scaleup 6s ease-in-out infinite;
+}
+
+.grid-box h1{
+    color: whitesmoke;
+    font-weight: 200;
+}
+
+.gl-1{
+    background: var(--gradient-1);
+}
+
+.gl-2{
+    background: var(--gradient-2);
+    margin-top: 30px;
+}
+
+.gl-3{
+    background: var(--gradient-3);
+}
+
+.gl-4{
+    background: var(--gradient-4);
+    margin-top: 30px;
+}
+
+.gl-1 h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+.gl-2 h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+.gl-3 h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+.gl-4 h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+.goal-content{
+    padding: 3rem;
+    position: relative;
+}
+
+.goal-content h1{
+    font-size: 6vmin;
+    margin-bottom: 30px;
+}
+
+.goal-content p{
+    padding-right: 6rem;
+    margin-bottom: 30px;
+}
+
+.circle img{
+    position: absolute;
+    top: -25%;
+    left: -13%;
+    width: 700px;
+    z-index: -1;
+    animation: scaleup 6s ease-in-out infinite;
+}
+
+/* Location */
+.location {
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.location h1{
+    font-size: 60px;
+    font-weight: 200;
+}
+
+.loc-images{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+}
+
+.lc-img{
+    height: 300px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.lc-img img{
+    max-height: 100%;
+    min-width: 50%;
+}
+
+.details{
+    position: absolute;
+    top: 0;
+    left: 342px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.507);
+    transform: scaleX(0);
+    transition: transform 0.6s ease;
+}
+
+.lc-img:hover .details{
+    transform: scaleX(1);
+}
+
+.details h1,h2,i{
+    color: whitesmoke;
+}
+
+.details i{
+    font-size: 30px;
+}
+
+/* Footer */
+.footer{
+    margin-top: 80px;
+    background-image: url("../images/footer.png");
+    background-size: cover;
+}
+
+.col-4{
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.col-4 p{
+    color: #100C08;
+}
+
+.col-4 img{
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.footer2 h4, .footer3 h4, .footer4 h4{
+    color: #100C08;
+    font-weight: 400px;
+}
+
+.footer hr{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-around;
+    color: grey;
+    padding: 30px;
+    font-weight: 400;
+}
+
+/* to the top */
+#scrolltp {
+    color: whitesmoke;
+    background: tomato;
+    padding: 15px;
+    border-radius: 50%;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    cursor: pointer;
+    transition: opacity 1.4s;
+}
+
+/* Animation */
+@keyframes scaleup{
+    0%{
+        transform: scale(1.14);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.14);
+    }
+}
